@@ -1,0 +1,30 @@
+"use strict";
+
+import { createStore, applyMiddleware, compose } from 'redux';
+import createReducer from "./store";
+import createSagaMiddleware from 'redux-saga';
+
+
+export function injectAsyncReducer(store, name, asyncReducer) {
+  if (store.asyncReducers[name]) return;
+
+  store.asyncReducers[name] = asyncReducer;
+  store.replaceReducer(createReducer(store.asyncReducers));
+}
+
+export const  sagaMiddleware = createSagaMiddleware();
+
+export const initialState = {};
+
+export default function configureStore(initialState) {
+  const store = createStore(createReducer(), initialState, compose(applyMiddleware(sagaMiddleware)));
+  store.asyncReducers = {};
+  return store;
+}
+
+
+//const store = createStore(createReducer, initialState, applyMiddleware(sagaMiddleware))  ;
+
+
+
+

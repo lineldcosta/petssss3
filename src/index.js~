@@ -1,0 +1,34 @@
+"use strict";
+import 'babel-regenerator-runtime';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { Router, Route, IndexRoute, browserHistory} from 'react-router';
+import routes from './pages/routes';
+
+//configure store
+import {sagaMiddleware} from './services';
+import rootSaga from './services/sagas';
+import configureStore from './services';
+import {initialState} from './services';
+
+const store = configureStore(initialState);
+
+sagaMiddleware.run(rootSaga);
+
+//const store = createStore(window.__INITIAL_STATE__);
+//const preloadedState = window.__PRELOADED_STATE__;
+
+// Allow the passed state to be garbage-collected
+//delete window.__PRELOADED_STATE__;
+
+// Create Redux store with initial state
+//const appStore = createStore(store, preloadedState);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes}>
+    </Router>
+  </Provider>
+  , document.querySelector('.page-container'));

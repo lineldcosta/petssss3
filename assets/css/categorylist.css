@@ -1,0 +1,66 @@
+
+.categories-list .list-item {
+  margin-bottom: 60px;
+}
+.categories-list .list-item .title {
+  margin-bottom: 10px;
+}
+.categories-list .list-item .title .icon {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #4611a7;
+  color: #fff;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.categories-list .list-item .title .icon i {
+  font-size: 14px;
+  line-height: 38px;
+}
+.categories-list .list-item .title h3 {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.categories-list .list-item ul {
+  list-style: none;
+  padding-left: 52px;
+}
+.categories-list .list-item ul li a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  color: black;
+  display: inline-block;
+  padding: 2px 0;
+}
+.categories-list .list-item ul li a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.categories-list .list-item ul li .count {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: inline-block;
+  font-size: 10px;
+  float: right;
+  top: 7px;
+  position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .categories-list .list-item .title h3 {
+      display: block;
+    }
+    .categories-list .list-item .title .icon {
+      display: block;
+    }
+    .categories-list .list-item ul {
+      padding-left: 0;
+    }
+}

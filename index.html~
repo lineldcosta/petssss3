@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Costa & shetty">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body  class="homepage navigation-fixed">
+    <div class="page-container"></div>
+  </body>
+  <script src="bundle.js"></script>
+</html>

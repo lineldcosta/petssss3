@@ -1,0 +1,41 @@
+"use strict";
+
+const route = {
+        childRoutes: [ {
+          path: '/',
+          component: require('./index').default,
+          getIndexRoute(partialNextState, cb) {
+            require.ensure([], (require) => {
+                cb(null, {
+	      	const configureStore = require('./../../services').default;
+		const initialState = require('./../../services').initialState;
+		const injectAsyncReducer = require('./../../services').injectAsyncReducer;
+		const store = configureStore(initialState);
+		const reduxFormReducer = require('redux-form').reducer;
+		injectAsyncReducer(store, 'form', reduxFormReducer);
+                  component: require('./home').default
+                })
+            })
+          },
+          childRoutes: [{
+              path: '/mylist',
+              getComponents(nextState, cb) {
+                require.ensure([], (require) => {
+                  cb(null, require('./listing').default);
+                })
+              }
+            },
+            {
+              path: '*',
+              getComponents(nextState, cb) {
+                require.ensure([], (require) => {
+                  cb(null, require('./../components/notfound').default);
+                })
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+export default route;

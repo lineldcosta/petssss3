@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------
+
+[Color codes]
+
+default_color[#4611a7];
+Color grey dark: #1f1f1f;
+Color grey light: #fafafa;
+
+[Typography]
+
+Body copy:		'Lato', sans-serif; 14px;
+Headers:		'Lato', sans-serif;
+
+-------------------------------------------------------------------*/
+@import "header.css";
+/*
+@import "hero.css";
+*/
+@import "elements.css";
+
+@import "universalclass.css";
+
+@import "classes.css";
+
+/*
+@import "forms.css";
+
+@import "categorylist.css";
+
+@import "modal.css";
+*/
+/* 7. Responsive */
+body::before {
+  display: none;
+  content: "lg";
+}
+
+.page-container{
+      display: initial;
+}
+.error{
+  color : #FF9494;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body::before {
+    content: "md";
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  body::before {
+    content: "sm";
+  }
+
+}
+@media (max-width: 767px) {
+  body::before {
+    content: "xs";
+  }
+
+  .invisible-on-mobile {
+    display: none !important;
+  }
+
+
+  [class*=" height-"]:not(.map) {
+    height: auto;
+  }
+}

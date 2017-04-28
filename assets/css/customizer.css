@@ -1,0 +1,146 @@
+.customizer {
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.33);
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -moz-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  -webkit-transform: translateX(-250px);
+  transform: translateX(-250px);
+  background-color: #fff;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  padding: 15px;
+  z-index: 999;
+  width: 250px;
+}
+.customizer.show-it {
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.customizer h3 {
+  margin-top: 0;
+  font-weight: normal;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.customizer .sp-container {
+  background-color: transparent;
+  border: none;
+}
+.customizer .sp-color, .customizer .sp-hue, .customizer .sp-clear {
+  border: none;
+}
+.customizer .sp-palette-container {
+  border: none;
+  padding-left: 0;
+}
+.customizer .sp-palette {
+  max-width: 20px;
+}
+.customizer .sp-palette .sp-thumb-el {
+  border: none;
+}
+.customizer .sp-button-container {
+  padding-top: 5px;
+}
+.customizer .sp-container button {
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  position: relative;
+  padding: 10px 10px;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  font-size: 10px;
+  right: -1px;
+  overflow: hidden;
+  margin-right: 2px;
+  font-weight: bold;
+}
+.customizer .sp-container button:active, .customizer .sp-container button:focus, .customizer .sp-container button:hover, .customizer .sp-container button:active:hover, .customizer .sp-container button:active:focus, .customizer .sp-container button:focus:hover {
+  background-color: #4611a7;
+}
+.customizer .sp-container button:active:after, .customizer .sp-container button:focus:after, .customizer .sp-container button:hover:after, .customizer .sp-container button:active:hover:after, .customizer .sp-container button:active:focus:after, .customizer .sp-container button:focus:hover:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.customizer .sp-container button:after {
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.customizer .sp-container button:hover, .customizer .sp-container button:active, .customizer .sp-container button:focus {
+  text-shadow: none;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-image: none;
+  background-color: transparent;
+}
+.customizer .sp-cancel {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  color: #000 !important;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+}
+.customizer .sp-container input {
+  padding: 2px 4px;
+  font: 10px "Lato", "sans-serif";
+}
+.customizer .sp-container input:focus {
+  border: none;
+}
+.customizer .sp-picker-container, .customizer .sp-palette-container {
+  padding-bottom: inherit;
+  margin-bottom: inherit;
+}
+.customizer .sp-picker-container {
+  padding-right: 0;
+}
+.customizer .checkboxes li {
+  display: block;
+}
+.customizer .cog {
+  -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  padding: 7px 11px;
+  top: 0;
+  right: -37px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 18px;
+}
+.customizer .cog:hover {
+  cursor: pointer;
+}
